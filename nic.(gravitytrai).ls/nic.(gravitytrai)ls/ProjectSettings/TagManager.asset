@@ -9,6 +9,7 @@ TagManager:
   - quad
   - collectable
   - projectile
+  - xit
   layers:
   - Default
   - TransparentFX

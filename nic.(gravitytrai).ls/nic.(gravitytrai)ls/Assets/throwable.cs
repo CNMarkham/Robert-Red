@@ -21,7 +21,7 @@ public class throwable : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && throwableCounter > 0)
+        if (Input.GetButtonDown("Fire1") && throwableCounter > 0)
         {
             throwableCounter -= 1;
             shuritext.text = throwableCounter.ToString();
