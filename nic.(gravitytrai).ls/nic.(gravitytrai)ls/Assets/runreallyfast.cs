@@ -9,11 +9,13 @@ public class runreallyfast : MonoBehaviour
     // The endermen in minecraft don't teleport they actually just run really, really fast
     // That's why they can't run over water
     // "
-    
+
     // - Minecraft Combat Handbook
     // Circa. ~1,000,000 years ago
 
+    public int sceneint = 1;
     public int enemies;
+    public int enemybias = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -24,14 +26,14 @@ public class runreallyfast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy").Length - 1; // 1 NME 'z unkillable but are there for decorat10n so just sub 2
+        enemies = GameObject.FindGameObjectsWithTag("Enemy").Length - enemybias; // 1 NME 'z unkillable but are there for decorat10n so just sub 2
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && enemies <= 0)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(sceneint);
         }
     }
 }

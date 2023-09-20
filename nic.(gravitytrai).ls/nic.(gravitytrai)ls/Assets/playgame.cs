@@ -13,7 +13,7 @@ public class playgame : MonoBehaviour
 
     public void OnMouseDown()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     // Update is called once per frame
