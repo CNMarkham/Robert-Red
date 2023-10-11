@@ -19,4 +19,15 @@ public class ItemBoxFeatures : MonoBehaviour
 
         transform.rotation *= rot;
     }
+
+    void x() { gameObject.SetActive(true);  }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Codey")
+        {
+            gameObject.SetActive(false);
+            Invoke("x", 1);
+        }
+    }
 }
