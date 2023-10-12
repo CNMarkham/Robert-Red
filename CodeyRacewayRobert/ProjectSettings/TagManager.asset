@@ -7,6 +7,7 @@ TagManager:
   - Codey
   - checkpoint
   - itemboxes
+  - cone
   layers:
   - Default
   - TransparentFX
