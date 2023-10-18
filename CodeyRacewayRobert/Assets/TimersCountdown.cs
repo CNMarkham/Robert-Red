@@ -7,6 +7,7 @@ public class TimersCountdown : MonoBehaviour
 {
     public Text lapTime;
     public Text startCountdown;
+    public Text xy;
 
     public float totalLapTime;
     public float totalCountdownTime;
@@ -14,6 +15,8 @@ public class TimersCountdown : MonoBehaviour
     public CodeyMove codey;
 
     private float speed;
+
+    public bool caneditxy;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,8 @@ public class TimersCountdown : MonoBehaviour
 
         speed = codey.Speed;
         codey.Speed = 0;
+
+        caneditxy = true;
     }
 
     // Update is called once per frame
@@ -40,14 +45,22 @@ public class TimersCountdown : MonoBehaviour
 
         if (totalCountdownTime <= -1)
         {
-            codey.Speed = speed;
+            if (codey.Speed == 0)
+            {
+                codey.Speed = speed;
+                startCountdown.text = "";
+            }
+
             startCountdown.text = "";
+
             totalLapTime -= Time.deltaTime;
             lapTime.text = Mathf.Floor(totalLapTime).ToString();
 
             if (totalLapTime <= -0.1)
             {
-                print("TIME's UP!");
+                xy.text = "TIME's UP!!!";
+
+                //caneditxy = false;
                 
             }
         }

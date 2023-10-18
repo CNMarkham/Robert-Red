@@ -1,19 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class ShellMove : MonoBehaviour
+public class NavMeshMovement : MonoBehaviour
 {
+    NavMeshAgent nv;
+    Transform x;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        nv = gameObject.GetComponent<NavMeshAgent>();
+        x = GameObject.FindGameObjectWithTag("cone").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * Time.deltaTime * 50;
+        nv.destination = x.transform.position;
     }
 
     private void OnCollisionEnter(Collision collision)

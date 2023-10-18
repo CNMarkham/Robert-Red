@@ -8,6 +8,7 @@ TagManager:
   - checkpoint
   - itemboxes
   - cone
+  - mgr
   layers:
   - Default
   - TransparentFX

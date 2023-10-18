@@ -27,7 +27,7 @@ public class ItemBoxFeatures : MonoBehaviour
         if (collision.gameObject.tag == "Codey")
         {
             gameObject.SetActive(false);
-            Invoke("x", 1);
+            Invoke("x", 3);
         }
     }
 }

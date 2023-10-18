@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 6864871645192332263}
   - component: {fileID: 3123096650194464935}
   - component: {fileID: 4238568335670980567}
+  - component: {fileID: 8633452779572281810}
   - component: {fileID: 6024252656237509507}
   - component: {fileID: 2960198100332219918}
+  - component: {fileID: 7886468439182972159}
   m_Layer: 0
   m_Name: NavmeshShell
   m_TagString: Untagged
@@ -27,8 +29,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5951277734817483239}
-  m_LocalRotation: {x: 0, y: 0.82561696, z: 0, w: 0.564231}
-  m_LocalPosition: {x: -1.6910667, y: 2.5192113, z: -34.87747}
+  m_LocalRotation: {x: 0, y: 0.99976796, z: 0, w: -0.0215435}
+  m_LocalPosition: {x: -2.8393202, y: -0.48078918, z: -60.14036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -85,6 +87,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8633452779572281810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951277734817483239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 035ed0b5f75b69d4887e9bdb5e712120, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &6024252656237509507
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -112,5 +126,27 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!195 &7886468439182972159
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5951277734817483239}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2.56
+  m_Speed: 29.94
+  m_Acceleration: 25.47
+  avoidancePriority: 10
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2.36
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1

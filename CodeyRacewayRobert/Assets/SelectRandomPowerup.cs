@@ -21,11 +21,11 @@ public class SelectRandomPowerup : MonoBehaviour
         {
             if (chosenPowerup != null)
             {
-                chosenPowerup.transform.localPosition = new Vector3(transform.position.x, transform.position.y + 4, transform.position.z) + transform.forward*2;
+                chosenPowerup.transform.localPosition = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z) + transform.forward*2;
                 chosenPowerup.transform.rotation = transform.rotation;
 
                 Instantiate(chosenPowerup);
-                // chosenPowerup = null;
+                chosenPowerup = null;
             }
 
         }
