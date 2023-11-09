@@ -39,7 +39,7 @@ public class MouseManager : MonoBehaviour
             launchVector = new Vector3(
                 mouseDifference.x * 1f,
                 mouseDifference.y * 1.2f,
-                mouseDifference.z * 1.5f
+                mouseDifference.y * 1.5f
             );
 
             launchVector.Normalize();
