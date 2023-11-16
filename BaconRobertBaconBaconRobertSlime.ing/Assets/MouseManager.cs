@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class MouseManager : MonoBehaviour
 {
+    public static MouseManager y;
+
+    public bool blah;
+
     [Header("Mouse Info")]
     public Vector3 clickStartLocation;
     public Vector3 launchVector;
@@ -15,15 +19,35 @@ public class MouseManager : MonoBehaviour
     public Transform slimeTransform;
     public Rigidbody slimeRigidbody;
 
+    private Transform old;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        y = this;
+        old = GameObject.FindGameObjectWithTag("Respawn").transform;
+    }
+
+    public void inv()
+    {
+        Invoke("z", 3);
+    }
+
+    void z()
+    {
+        if (life.f.winnerwinner) return;
+        life.f.remlif();
+        slimeRigidbody.transform.position = old.position;
+        slimeRigidbody.transform.rotation = old.rotation;
+        slimeRigidbody.isKinematic = true;
+        blah = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (blah) { return; }
+        
         if (Input.GetMouseButtonDown(0))
         {
 
