@@ -285,9 +285,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifes: 3
   winner: 0
+  winnerwinner: 0
+  l2: 0
   ma: {fileID: 1836077212}
   text: {fileID: 1883696824}
   heart: 
+  st: 0
 --- !u!4 &304488861
 Transform:
   m_ObjectHideFlags: 0

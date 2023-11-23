@@ -32,9 +32,12 @@ public class life : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+
         heart = "<3";
         text.text = hearts(lifes);
         f = this;
+        pick.Canvas.SetActive(false);
     }
 
     public void remlif() { lifes -= 1; }
@@ -71,17 +74,20 @@ public class life : MonoBehaviour
         if (lifes == 0)
         {
             text.text = "loser";
-
+            ma.blah = true;
+            pick.Canvas.SetActive(true);
         }
 
         if (winner == true) { 
             text.text = "Winner";
+            pick.Canvas.SetActive(true);
         }
 
         if (winnerwinner == true)
         {
             text.text = "WINNNERR";
             ma.blah = true;
+            pick.Canvas.SetActive(true);
         }
     }
 }
