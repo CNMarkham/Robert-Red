@@ -8,6 +8,8 @@ public class stove : MonoBehaviour
     public GameObject friedEgg;
     public GameObject beams;
     public string cookedFood = "";
+    public bool isCooking = false;
+    public string sfc = "";
 
     // Start is called before the first frame update
     void Start()
@@ -18,18 +20,28 @@ public class stove : MonoBehaviour
 
     public void ToastBread()
     {
+        isCooking = true;
         if (cookedFood != "") { return; }
         beams.SetActive(true);
         toast.SetActive(true);
-        cookedFood = "toast";
+        sfc = "toast";
+        Invoke("Con", 2);
     }
 
     public void ToastEgg()
     {
+        isCooking = true;
         if (cookedFood != "") { return; }
         beams.SetActive(true);
         friedEgg.SetActive(true);
-        cookedFood = "friedegg";
+        sfc = "friedegg";
+        Invoke("Con", 2);
+    }
+
+    public void Con()
+    {
+        isCooking = false;
+        cookedFood = sfc;
     }
 
 
